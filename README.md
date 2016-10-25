@@ -8,4 +8,4 @@ which is currently declared as **gs://locationchat-3d569.appspot.com**
 Please make sure that you have created your own storage url before using this application. 
 
 **Also please change your bundle id to whatever you have used to create the project in Firebase** ### **This is mandatory** ###
-![Alt text](/relative/FirebaseChat/Simulator Screen Shot 25-Oct-2016, 10.58.44 PM.png?raw=true "Firebase Chat")
+![alt tag](https://github.com/sohamb1390/FirebaseChat/blob/master/Simulator%20Screen%20Shot%2025-Oct-2016%2C%2010.58.44%20PM.png)
