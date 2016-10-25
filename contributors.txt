@@ -1,1 +1,3 @@
-Soham Bhattacharjee
+Chat window has been implemented from the custom control named: FTChatMessage (https://github.com/liufengting/FTChatMessage)
+A custom HUD has been used in this project which is taken from the repo: PKHUD (https://github.com/pkluz/PKHUD)
+A custom tooltip view has been implemented  in this project which is taken from the repo: EasyTipView (https://github.com/teodorpatras/EasyTipView)
