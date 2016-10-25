@@ -9,5 +9,10 @@ Please make sure that you have created your own storage url before using this ap
 
 **Also please change your bundle id to whatever you have used to create the project in Firebase** ### **This is mandatory** ###
 
+### Steps to follow ###
+* Sign In/Up to the application. Your email id & password are the keys.
+* A map will be displayed after that where you can see all the logged in users and their locations. (Detailing of the map is not completed yet)
+* Go to the Chat room and you will be able to chat with multiple persons from various locations. Till now I have only implemented the normal text & image chat.
+
 
 ![alt tag](https://github.com/sohamb1390/FirebaseChat/blob/master/Simulator%20Screen%20Shot%2025-Oct-2016%2C%2010.58.44%20PM.png)
