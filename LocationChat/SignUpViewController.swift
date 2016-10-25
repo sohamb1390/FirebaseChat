@@ -36,15 +36,15 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     override func viewDidAppear(_ animated: Bool) {
         customiseUI()
-
-//        do {
-//            try FIRAuth.auth()?.signOut()
-//            AppState.sharedInstance.signedIn = false
-//
-//        } catch let signOutError as NSError {
-//            print ("Error signing out: \(signOutError.localizedDescription)")
-//        }
-
+        
+        //        do {
+        //            try FIRAuth.auth()?.signOut()
+        //            AppState.sharedInstance.signedIn = false
+        //
+        //        } catch let signOutError as NSError {
+        //            print ("Error signing out: \(signOutError.localizedDescription)")
+        //        }
+        
         //        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
         //            if let user = user {
         //
@@ -66,7 +66,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         btnUserProfile.layer.borderWidth = 2.0
         btnUserProfile.layer.masksToBounds = true
         btnUserProfile.clipsToBounds = true
-
+        
         print("Screen height: \(UIScreen.main.bounds.height)")
         if UIScreen.main.bounds.height <= 568.0 {
             NotificationCenter.default.addObserver(forName: NSNotification.Name.UIKeyboardDidShow, object: nil, queue: OperationQueue.main) { (notification) in
@@ -157,16 +157,24 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
     }
     @IBAction func didRequestPasswordReset(_ sender: AnyObject) {
-        let prompt = UIAlertController.init(title: nil, message: "Email:", preferredStyle: .alert)
-        let okAction = UIAlertAction.init(title: "OK", style: .default) { (action) in
+        let prompt = UIAlertController.init(title: nil, message: "Please enter your valid Email ID", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Reset", style: .default) { (action) in
+            prompt.textFields![0].keyboardType = .emailAddress
+            prompt.textFields![0].font = self.emailField.font
             let userInput = prompt.textFields![0].text
             if (userInput!.isEmpty) {
                 return
             }
+            UIApplication.shared.startNetworkActivity(info: "Validating your mail id")
             FIRAuth.auth()?.sendPasswordReset(withEmail: userInput!) { (error) in
+                UIApplication.shared.stopNetworkActivity()
                 if let error = error {
                     print(error.localizedDescription)
-                    return
+                    self.showAlert(title: "Unable to reset your password", contentText: error.localizedDescription, actions: [UIAlertAction.init(title: "Retry", style: .default, handler: nil)])
+                }
+                else {
+                    self.showAlert(title: "Password reset link has been sent to your mail id", contentText: "Please reset your password from the link that has been provided to your mail id", actions: [UIAlertAction.init(title: "Ok", style: .default, handler: nil)])
+                    
                 }
             }
         }
@@ -182,7 +190,7 @@ class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, U
         imagePicker.allowsEditing = true
         present(imagePicker, animated: true, completion: nil)
     }
-
+    
     func setParameterChangeRequest(_ user: FIRUser, iconUrl: URL?, isForSignUp: Bool) {
         let changeRequest = user.profileChangeRequest()
         changeRequest.displayName = isForSignUp ? displayNameField.text ?? "" : user.displayName ?? ""
@@ -276,29 +284,29 @@ extension SignUpViewController {
             do {
                 try firebaseAuth.signOut()
                 completion(true, nil)
-
+                
             } catch let signOutError as NSError {
                 print ("Error signing out: \(signOutError.localizedDescription)")
                 completion(false, signOutError.localizedDescription)
             }
-
-//            AppState.sharedInstance.firebaseRef.child(Constants.LocationFields.userLocation).child(userID).removeValue(completionBlock: { (error, databaseRef) in
-//                if error == nil {
-//                    print("Deleted data: \(databaseRef.description())")
-//                    do {
-//                        try firebaseAuth.signOut()
-//                        completion(true, nil)
-//                        
-//                    } catch let signOutError as NSError {
-//                        print ("Error signing out: \(signOutError.localizedDescription)")
-//                        completion(false, signOutError.localizedDescription)
-//                    }
-//                }
-//                else {
-//                    print("Error signing out: \(error!.localizedDescription)")
-//                    completion(false, error!.localizedDescription)
-//                }
-//            })
+            
+            //            AppState.sharedInstance.firebaseRef.child(Constants.LocationFields.userLocation).child(userID).removeValue(completionBlock: { (error, databaseRef) in
+            //                if error == nil {
+            //                    print("Deleted data: \(databaseRef.description())")
+            //                    do {
+            //                        try firebaseAuth.signOut()
+            //                        completion(true, nil)
+            //
+            //                    } catch let signOutError as NSError {
+            //                        print ("Error signing out: \(signOutError.localizedDescription)")
+            //                        completion(false, signOutError.localizedDescription)
+            //                    }
+            //                }
+            //                else {
+            //                    print("Error signing out: \(error!.localizedDescription)")
+            //                    completion(false, error!.localizedDescription)
+            //                }
+            //            })
         }
         else {
             completion(false, "There's some unknown error occured, please try again after some time.")
