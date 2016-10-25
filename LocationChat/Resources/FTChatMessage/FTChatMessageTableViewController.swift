@@ -19,9 +19,6 @@ class FTChatMessageTableViewController: UIViewController, UITableViewDelegate,UI
     var delegete : FTChatMessageDelegate?
     var dataSource : FTChatMessageDataSource?
     var messageInputMode : FTChatMessageInputMode = FTChatMessageInputMode.none
-
-    let sender2 = FTChatMessageUserModel.init(id: "2", name: "LiuFengting", icon_url: "http://ww3.sinaimg.cn/mw600/9d319f9agw1f3k8e4pixfj20u00u0ac6.jpg", extra_data: nil, isSelf: true)
-
     
     lazy var messageTableView : UITableView! = {
         let tableView = UITableView(frame: CGRect(x: 0, y: 0, width: FTScreenWidth, height: FTScreenHeight), style: .plain)
@@ -59,14 +56,14 @@ class FTChatMessageTableViewController: UIViewController, UITableViewDelegate,UI
         accessoryView.frame = CGRect(x: 0, y: FTScreenHeight, width: FTScreenWidth, height: FTDefaultAccessoryViewHeight)
         return accessoryView
     }()
-
-
+    
+    
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         self.view.addSubview(messageTableView)
         
         self.view.addSubview(messageInputView)
@@ -79,29 +76,45 @@ class FTChatMessageTableViewController: UIViewController, UITableViewDelegate,UI
             self.scrollToBottom(false)
         }
     }
-
-    
-
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
-
         messageAccessoryView.setupAccessoryView()
     }
     
-
-
-
-    
-    
     internal func addNewMessage(_ message : FTChatMessageModel) {
+        var messageDict: [String: String] = [:]
+        messageDict[Constants.MessageFields.text] = message.messageText
+        messageDict[Constants.MessageFields.name] = message.messageSender.senderName
+        messageDict[Constants.MessageFields.userID] = message.messageSender.senderId
+        messageDict[Constants.MessageFields.messageTime] = message.messageTimeStamp
+        messageDict[Constants.MessageFields.messageType] = FTChatMessageType.getMessageStringFromType(messageType: message.messageType)
+        messageDict[Constants.MessageFields.photoURL] = message.messageSender.senderIconUrl
+
+        // Push data to Firebase Database
+        AppState.sharedInstance.firebaseRef.child(Constants.MessageFields.messages).childByAutoId().setValue(messageDict)
+
         
-        chatMessageDataArray.append(message);
+        //chatMessageDataArray.append(message);
+        //self.origanizeAndReload()
+        //self.scrollToBottom(true)
+    }
+    internal func addNewImageMessage(_ message : FTChatMessageImageModel) {
+        var messageDict: [String: String] = [:]
+        messageDict[Constants.MessageFields.text] = message.messageText
+        messageDict[Constants.MessageFields.name] = message.messageSender.senderName
+        messageDict[Constants.MessageFields.userID] = message.messageSender.senderId
+        messageDict[Constants.MessageFields.messageTime] = message.messageTimeStamp
+        messageDict[Constants.MessageFields.messageType] = FTChatMessageType.getMessageStringFromType(messageType: message.messageType)
+        messageDict[Constants.MessageFields.photoURL] = message.messageSender.senderIconUrl
+        messageDict[Constants.MessageFields.imageURL] = message.imageUrl
 
-        self.origanizeAndReload()
-
-        self.scrollToBottom(true)
-
+        // Push data to Firebase Database
+        AppState.sharedInstance.firebaseRef.child(Constants.MessageFields.messages).childByAutoId().setValue(messageDict)
+        
+        
+        //chatMessageDataArray.append(message);
+        //self.origanizeAndReload()
+        //self.scrollToBottom(true)
     }
     
     func origanizeAndReload() {
@@ -130,8 +143,4 @@ class FTChatMessageTableViewController: UIViewController, UITableViewDelegate,UI
         self.messageArray = nastyArray
         self.messageTableView.reloadData()
     }
-
-    
-
-
 }

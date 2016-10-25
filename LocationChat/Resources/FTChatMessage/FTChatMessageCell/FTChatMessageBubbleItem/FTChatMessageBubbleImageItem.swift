@@ -8,6 +8,7 @@
 
 import UIKit
 import Kingfisher
+import FirebaseStorage
 
 class FTChatMessageBubbleImageItem: FTChatMessageBubbleItem {
     
@@ -34,12 +35,25 @@ class FTChatMessageBubbleImageItem: FTChatMessageBubbleItem {
             if let image : UIImage = (aMessage as! FTChatMessageImageModel).image {
                 layer.contents = image.withRenderingMode(.alwaysOriginal).cgImage
             }else  if let imageURL : String = (aMessage as! FTChatMessageImageModel).imageUrl {
-                ImageDownloader.default.downloadImage(with: URL(string: imageURL)!, options: [], progressBlock: nil) {
-                    (image, error, url, data) in
-                    if image != nil {
-                        layer.contents = image?.cgImage
+                if imageURL.hasPrefix("gs://") {
+                    FIRStorage.storage().reference(forURL: imageURL).data(withMaxSize: INT64_MAX){ (data, error) in
+                        if let error = error {
+                            print("Error downloading: \(error)")
+                            return
+                        }
+                        if let image: UIImage = UIImage(data: data!) {
+                            layer.contents = image.cgImage
+                        }
                     }
+                } else if let URL = URL(string: imageURL), let data = try? Data(contentsOf: URL), let image = UIImage(data: data) {
+                    layer.contents = image.cgImage
                 }
+//                ImageDownloader.default.downloadImage(with: URL(string: imageURL)!, options: [], progressBlock: nil) {
+//                    (image, error, url, data) in
+//                    if image != nil {
+//                        layer.contents = image?.cgImage
+//                    }
+//                }
             }
         }else{
             if let image = UIImage(named : "dog.jpg") {
@@ -47,7 +61,4 @@ class FTChatMessageBubbleImageItem: FTChatMessageBubbleItem {
             }
         }
     }
-    
-    
-    
 }

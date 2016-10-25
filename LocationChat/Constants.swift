@@ -1,34 +1,105 @@
 //
-//  Copyright (c) 2015 Google Inc.
+//  Constants.swift
+//  LocationChat
 //
-//  Licensed under the Apache License, Version 2.0 (the "License");
-//  you may not use this file except in compliance with the License.
-//  You may obtain a copy of the License at
+//  Created by Soham Bhattacharjee on 15/10/16.
+//  Copyright © 2016 Soham Bhattacharjee. All rights reserved.
 //
-//  http://www.apache.org/licenses/LICENSE-2.0
-//
-//  Unless required by applicable law or agreed to in writing, software
-//  distributed under the License is distributed on an "AS IS" BASIS,
-//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-//  See the License for the specific language governing permissions and
-//  limitations under the License.
-//
+
+import CoreLocation
+import Firebase
+import MapKit
 
 struct Constants {
+    
+    struct NotificationKeys {
+        static let SignedIn = "onSignInCompleted"
+    }
+    
+    struct Segues {
+        static let signInToMap = "SignInToMapSegue"
+        static let preSignInToMap = "PreSignInToMapSegue"
+        static let preSignInToSignUpSegue = "PreSignInToSignUpSegue"
 
-  struct NotificationKeys {
-    static let SignedIn = "onSignInCompleted"
-  }
+        static let mapToChat = "MapToChatSegue"
+        static let newSignIn = "NewSignInVC"
+        static let unwindToSignUp = "UnwindToSignUpSegue"
+    }
+    
+    struct MessageFields {
+        static let userID = "userID"
+        static let name = "name"
+        static let text = "text"
+        static let messageTime = "messageTime"
+        static let photoURL = "photoURL"
+        static let imageURL = "imageURL"
+        static let messages = "messages"
+        static let messageType = "messageType"
+    }
+    
+    struct UserFields {
+        static let users = "users"
+        static let userPhoto = "userPhoto"
+    }
+    
+    struct LocationFields {
+        static let userLocation = "Location"
+        static let userLatitude = "Latitude"
+        static let userLongitude = "Longitude"
+        static let userName = "UserName"
+    }
+    
+    struct AppConstants {
+        static let storage_url = "gs://locationchat-3d569.appspot.com"
+        static let chatCellID = "ChatCellID"
+    }
+}
 
-  struct Segues {
-    static let SignInToFp = "SignInToFP"
-    static let FpToSignIn = "FPToSignIn"
-  }
-
-  struct MessageFields {
-    static let name = "name"
-    static let text = "text"
-    static let photoURL = "photoURL"
-    static let imageURL = "imageURL"
-  }
+class ChatLocation: NSObject, CLLocationManagerDelegate {
+    static let sharedInstance = ChatLocation()
+    let locationManager = CLLocationManager()
+    
+    func initialiseCoreLocation() {
+        // Ask for Authorisation from the User.
+        locationManager.requestAlwaysAuthorization()
+        
+        // For use in foreground
+        locationManager.requestWhenInUseAuthorization()
+        
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.distanceFilter = 10.0
+            locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+            locationManager.startMonitoringSignificantLocationChanges()
+            locationManager.startUpdatingLocation()
+        }
+    }
+    func stopLocationUpdate() {
+        locationManager.stopUpdatingLocation()
+        locationManager.stopMonitoringSignificantLocationChanges()
+        locationManager.delegate = nil
+    }
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Unable to update your location :\(error.localizedDescription)")
+    }
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let locationObj = locations.last {
+            if let appUser = FIRAuth.auth()?.currentUser {
+                let locationDict: [String: String] =
+                    [Constants.LocationFields.userLatitude: String(locationObj.coordinate.latitude) as String,
+                     Constants.LocationFields.userLongitude: String(locationObj.coordinate.longitude) as String,
+                     Constants.LocationFields.userName: appUser.displayName! as String]
+                
+                AppState.sharedInstance.firebaseRef.child(Constants.LocationFields.userLocation).child(appUser.uid).setValue(locationDict)
+            }
+        }
+    }
+}
+class ColorPointAnnotation: MKPointAnnotation {
+    var pinColor: UIColor
+    
+    init(pinColor: UIColor) {
+        self.pinColor = pinColor
+        super.init()
+    }
 }

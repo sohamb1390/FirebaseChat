@@ -10,6 +10,8 @@ import UIKit
 
 class CustomPinAnnotationView: UIView {
 
+    // MARK: - IBOutlets
+    @IBOutlet weak var lblLocation: UILabel!
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

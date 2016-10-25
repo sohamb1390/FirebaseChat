@@ -34,5 +34,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This app want&apos;s to know about your current location</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app want&apos;s to access your photo library</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app want&apos;s to know about your current location</string>
 </dict>
 </plist>

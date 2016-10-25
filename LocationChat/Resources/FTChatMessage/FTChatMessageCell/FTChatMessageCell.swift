@@ -7,13 +7,16 @@
 //
 
 import UIKit
+import EasyTipView
 
 //MARK: - FTChatMessageCell
-
-class FTChatMessageCell: UITableViewCell {
+class FTChatMessageCell: UITableViewCell, EasyTipViewDelegate {
 
     var message : FTChatMessageModel!
     var messageBubbleItem: FTChatMessageBubbleItem!
+    var easyTipView: EasyTipView?
+    var selectedBubbleItem: FTChatMessageBubbleItem?
+    
     
     //MARK: - messageTimeLabel
     lazy var messageTimeLabel: UILabel! = {
@@ -72,13 +75,14 @@ class FTChatMessageCell: UITableViewCell {
     func setupCellBubbleItem(_ bubbleFrame: CGRect, for indexPath: IndexPath) {
         
         messageBubbleItem = FTChatMessageBubbleItem.getBubbleItemWithFrame(bubbleFrame, aMessage: message, for: indexPath)
-        messageBubbleItem.addTarget(self, action: #selector(self.itemTapped), for: UIControlEvents.touchUpInside)
+        messageBubbleItem.addTarget(self, action: #selector(self.itemTapped(bubbleItem:)), for: UIControlEvents.touchUpInside)
         self.addSubview(messageBubbleItem)
         
         if message.isUserSelf  && message.messageDeliverStatus != FTChatMessageDeliverStatus.succeeded{
             self.addSendStatusView(bubbleFrame)
         }
     }
+
     
     //MARK: - addTimeLabel
     func addTimeLabel() {
@@ -112,13 +116,39 @@ class FTChatMessageCell: UITableViewCell {
         self.addSubview(messageDeliverStatusView!)
     }
     
-    @objc func itemTapped() {
+    // MARK: - Copy Actions
+    @objc func itemTapped(bubbleItem: FTChatMessageBubbleItem) {
         print("message item tapped");
+        //showMenu(bubbleItem: bubbleItem)
+        if let parentView = bubbleItem.superview?.superview {
+            var didFoundToolTip = false
+            for subView in parentView.subviews {
+                if subView.isKind(of: EasyTipView.classForCoder()) {
+                    let tipView = subView as! EasyTipView
+                    tipView.dismiss()
+                    if !didFoundToolTip {
+                        didFoundToolTip = true
+                    }
+                }
+            }
+            if didFoundToolTip {
+                return
+            }
+        }
+        print(bubbleItem.superview!.superview!.subviews)
+        selectedBubbleItem = bubbleItem
+        easyTipView = EasyTipView(text: "copy", preferences: EasyTipView.globalPreferences, delegate: self)
+        easyTipView!.show(animated: true, forView: bubbleItem, withinSuperview: bubbleItem.superview?.superview)
+    }
+    func easyTipViewDidDismiss(_ tipView: EasyTipView) {
+        let board = UIPasteboard.general
+        board.string = selectedBubbleItem?.message.messageText
     }
 }
 
 
-//MARK: - FTChatMessageCell extension
+
+// MARK: - FTChatMessageCell extension
 
 extension FTChatMessageCell {
 

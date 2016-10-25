@@ -8,7 +8,27 @@
 
 import UIKit
 
-
+extension URLSession {
+    /// Return data from synchronous URL request
+    public static func requestSynchronousData(request: NSURLRequest) -> NSData? {
+        var data: NSData? = nil
+        let semaphore = DispatchSemaphore(value: 0)
+        let task = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: {
+            taskData, _, error -> () in
+            data = taskData as NSData?
+            if data == nil, let error = error {print(error)}
+            semaphore.signal();
+        })
+        task.resume()
+        let _ = semaphore.wait(timeout: .distantFuture)
+        return data
+    }
+    public static func requestSynchronousDataWithURLString(requestString: String) -> NSData? {
+        guard let url = NSURL(string:requestString) else {return nil}
+        let request = NSURLRequest(url: url as URL)
+        return URLSession.requestSynchronousData(request: request)
+    }
+}
 class FTChatMessageImageSize: NSObject {
     
     // MARK: - getImageSize
@@ -32,10 +52,10 @@ class FTChatMessageImageSize: NSObject {
             size = self.getJPGImageSize(request)
         }
         if CGSize.zero.equalTo(size) {
-            guard let data = try? NSURLConnection.sendSynchronousRequest(request as URLRequest, returning: nil) else {
+            guard let data = URLSession.requestSynchronousData(request: request) else {
                 return size
             }
-            let image = UIImage(data: data)
+            let image = UIImage(data: data as Data)
             if image != nil {
                 size = (image?.size)!
             }
@@ -46,7 +66,7 @@ class FTChatMessageImageSize: NSObject {
     // MARK: - getPNGImageSize
     fileprivate class func getPNGImageSize(_ request:NSMutableURLRequest) -> CGSize {
         request.setValue("bytes=16-23", forHTTPHeaderField: "Range")
-        guard let data = try? NSURLConnection.sendSynchronousRequest(request as URLRequest, returning: nil) else {
+        guard let data: Data = URLSession.requestSynchronousData(request: request) as Data? else {
             return CGSize.zero
         }
         if data.count == 8 {
@@ -78,7 +98,7 @@ class FTChatMessageImageSize: NSObject {
     // MARK: - getGIFImageSize
     fileprivate class func getGIFImageSize(_ request:NSMutableURLRequest) -> CGSize {
         request.setValue("bytes=6-9", forHTTPHeaderField: "Range")
-        guard let data = try? NSURLConnection.sendSynchronousRequest(request as URLRequest, returning: nil) else {
+        guard let data: Data = URLSession.requestSynchronousData(request: request) as Data? else {
             return CGSize.zero
         }
         if data.count == 4 {
@@ -104,7 +124,7 @@ class FTChatMessageImageSize: NSObject {
     // MARK: - getJPGImageSize
     fileprivate class func getJPGImageSize(_ request:NSMutableURLRequest) -> CGSize {
         request.setValue("bytes=0-209", forHTTPHeaderField: "Range")
-        guard let data = try? NSURLConnection.sendSynchronousRequest(request as URLRequest, returning: nil) else {
+        guard let data: Data = URLSession.requestSynchronousData(request: request) as Data? else {
             return CGSize.zero
         }
         if data.count <= 0x58 {

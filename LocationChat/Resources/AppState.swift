@@ -1,26 +1,37 @@
 //
-//  Copyright (c) 2015 Google Inc.
+//  AppState.swift
+//  LocationChat
 //
-//  Licensed under the Apache License, Version 2.0 (the "License");
-//  you may not use this file except in compliance with the License.
-//  You may obtain a copy of the License at
-//
-//  http://www.apache.org/licenses/LICENSE-2.0
-//
-//  Unless required by applicable law or agreed to in writing, software
-//  distributed under the License is distributed on an "AS IS" BASIS,
-//  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-//  See the License for the specific language governing permissions and
-//  limitations under the License.
+//  Created by Soham Bhattacharjee on 15/10/16.
+//  Copyright © 2016 Soham Bhattacharjee. All rights reserved.
 //
 
 import Foundation
+import FirebaseDatabase
+import FirebaseStorage
+import EasyTipView
 
 class AppState: NSObject {
+    
+    static let sharedInstance = AppState()
+    
+    var displayName: String?
+    var photoURL: URL?
+    let firebaseRef = FIRDatabase.database().reference()
+    let storageRef = FIRStorage.storage().reference(forURL: Constants.AppConstants.storage_url)
+    
+    func setToolTipPreferences() {
+        var preferences = EasyTipView.Preferences()
+        preferences.drawing.font = UIFont.systemFont(ofSize: 14.0)
+        preferences.drawing.foregroundColor = UIColor.white
+        preferences.drawing.backgroundColor = UIColor.black
+        preferences.drawing.arrowPosition = EasyTipView.ArrowPosition.any
+        
+        /*
+         * Optionally you can make these preferences global for all future EasyTipViews
+         */
+        EasyTipView.globalPreferences = preferences
 
-  static let sharedInstance = AppState()
+    }
 
-  var signedIn = false
-  var displayName: String?
-  var photoURL: URL?
 }

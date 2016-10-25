@@ -28,8 +28,7 @@ class FTChatMessageHeader: UILabel {
         
 //        self.isUserInteractionEnabled = false
         messageSenderModel = senderModel;
-        
-        self.setupHeader(URL(string: senderModel.senderIconUrl), isSender: senderModel.isUserSelf)
+        self.setupHeader(URL(string: senderModel.senderIconUrl ?? ""), isSender: senderModel.isUserSelf)
 
     }
     
@@ -40,6 +39,7 @@ class FTChatMessageHeader: UILabel {
         
         let iconRect = isSender ? CGRect(x: self.frame.width-FTDefaultMargin-FTDefaultIconSize, y: FTDefaultMargin, width: FTDefaultIconSize, height: FTDefaultIconSize) : CGRect(x: FTDefaultMargin, y: FTDefaultMargin, width: FTDefaultIconSize, height: FTDefaultIconSize)
         iconButton = UIButton(frame: iconRect)
+        iconButton.contentMode = .scaleAspectFill
         iconButton.backgroundColor = isSender ? FTDefaultOutgoingColor : FTDefaultIncomingColor
         iconButton.layer.cornerRadius = FTDefaultIconSize/2;
         iconButton.clipsToBounds = true

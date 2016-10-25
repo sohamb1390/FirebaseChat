@@ -1,0 +1,6 @@
+framework module Pods_LocationChat {
+  umbrella header "Pods-LocationChat-umbrella.h"
+
+  export *
+  module * { export * }
+}

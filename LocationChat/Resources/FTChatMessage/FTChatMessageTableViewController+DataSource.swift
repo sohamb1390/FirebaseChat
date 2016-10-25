@@ -23,19 +23,19 @@ extension FTChatMessageTableViewController{
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
         
     }
-
+    
     //MARK: - scrollToBottom -
     
     func scrollToBottom(_ animated: Bool) {
         if self.messageArray.count > 0 {
             let lastSection = self.messageArray.count - 1
             let lastSectionMessageCount = messageArray[lastSection].count - 1
-
+            
             self.messageTableView.scrollToRow(at: IndexPath(row: lastSectionMessageCount, section: lastSection), at: UITableViewScrollPosition.top, animated: animated)
         }
     }
     
-
+    
     
     //MARK: - keyborad notification functions -
     
@@ -96,9 +96,14 @@ extension FTChatMessageTableViewController{
         messageInputView.layoutIfNeeded()
     }
     internal func ft_chatMessageInputViewShouldDoneWithText(_ textString: String) {
-        let message8 = FTChatMessageModel(data: textString, time: "4.12 22:42", from: sender2, type: .text)
-        self.addNewMessage(message8)
-        
+        if let mesageModel = FTChatMessageUserModel.getCurrentUserModel() {
+            let message = FTChatMessageModel(data: textString, time: Date.getCurrentDateInString(dateStyle: .long, timeStyle: .medium), from: mesageModel, type: .text)
+            
+            self.addNewMessage(message)
+        }
+        else {
+            print("App User not found")
+        }
     }
     internal func ft_chatMessageInputViewShouldShowRecordView(){
         let originMode = messageInputMode
@@ -246,7 +251,6 @@ extension FTChatMessageTableViewController{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-
     //MARK: - FTChatMessageHeaderDelegate -
     
     func ft_chatMessageHeaderDidTappedOnIcon(_ messageSenderModel: FTChatMessageUserModel) {

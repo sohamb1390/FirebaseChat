@@ -7,6 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440DE50A1DB3EFDD0077F65D /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 440DE5091DB3EFDD0077F65D /* Photos.framework */; };
+		440DE50D1DB3FEDF0077F65D /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440DE50B1DB3FEDF0077F65D /* ChatCell.swift */; };
+		440DE50E1DB3FEDF0077F65D /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 440DE50C1DB3FEDF0077F65D /* ChatCell.xib */; };
+		442A8FCA1DB7545E00EB16FF /* PreSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442A8FC91DB7545E00EB16FF /* PreSignInViewController.swift */; };
+		4445FB961DB6136300C36A14 /* FTChatMessageBubbleAudioItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4445FB7A1DB6136300C36A14 /* FTChatMessageBubbleAudioItem.swift */; };
+		4445FB971DB6136300C36A14 /* FTChatMessageBubbleImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4445FB7B1DB6136300C36A14 /* FTChatMessageBubbleImageItem.swift */; };
+		4445FB981DB6136300C36A14 /* FTChatMessageBubbleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4445FB7C1DB6136300C36A14 /* FTChatMessageBubbleItem.swift */; };
+		4445FB991DB6136300C36A14 /* FTChatMessageBubbleLocationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4445FB7D1DB6136300C36A14 /* FTChatMessageBubbleLocationItem.swift */; };
+		4445FB9A1DB6136300C36A14 /* FTChatMessageBubbleTextItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4445FB7E1DB6136300C36A14 /* FTChatMessageBubbleTextItem.swift */; };
+		4445FB9B1DB6136300C36A14 /* FTChatMessageBubbleVideoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4445FB7F1DB6136300C36A14 /* FTChatMessageBubbleVideoItem.swift */; };
+		4445FB9C1DB6136300C36A14 /* FTChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4445FB801DB6136300C36A14 /* FTChatMessageCell.swift */; };
+		4445FB9D1DB6136300C36A14 /* FTChatMessageDeliverStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4445FB811DB6136300C36A14 /* FTChatMessageDeliverStatusView.swift */; };
+		4445FB9E1DB6136300C36A14 /* FTChatMessageConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4445FB821DB6136300C36A14 /* FTChatMessageConfiguration.swift */; };
+		4445FB9F1DB6136300C36A14 /* FTChatMessageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4445FB831DB6136300C36A14 /* FTChatMessageDataSource.swift */; };
+		4445FBA01DB6136300C36A14 /* FTChatMessageDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4445FB841DB6136300C36A14 /* FTChatMessageDelegate.swift */; };
+		4445FBA11DB6136300C36A14 /* FTChatMessageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4445FB861DB6136300C36A14 /* FTChatMessageHeader.swift */; };
+		4445FBA21DB6136300C36A14 /* FTChatMessageImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4445FB871DB6136300C36A14 /* FTChatMessageImageSize.swift */; };
+		4445FBA31DB6136300C36A14 /* FTChatMessageAccessoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4445FB891DB6136300C36A14 /* FTChatMessageAccessoryItem.swift */; };
+		4445FBA41DB6136300C36A14 /* FTChatMessageAccessoryItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4445FB8A1DB6136300C36A14 /* FTChatMessageAccessoryItem.xib */; };
+		4445FBA51DB6136300C36A14 /* FTChatMessageAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4445FB8B1DB6136300C36A14 /* FTChatMessageAccessoryView.swift */; };
+		4445FBA61DB6136300C36A14 /* FTChatMessageAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4445FB8C1DB6136300C36A14 /* FTChatMessageAccessoryView.xib */; };
+		4445FBA71DB6136300C36A14 /* FTChatMessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4445FB8D1DB6136300C36A14 /* FTChatMessageInputView.swift */; };
+		4445FBA81DB6136300C36A14 /* FTChatMessageInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4445FB8E1DB6136300C36A14 /* FTChatMessageInputView.xib */; };
+		4445FBA91DB6136300C36A14 /* FTChatMessageRecorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4445FB8F1DB6136300C36A14 /* FTChatMessageRecorderView.swift */; };
+		4445FBAA1DB6136300C36A14 /* FTChatMessageRecorderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4445FB901DB6136300C36A14 /* FTChatMessageRecorderView.xib */; };
+		4445FBAB1DB6136300C36A14 /* FTChatMessageMarcos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4445FB911DB6136300C36A14 /* FTChatMessageMarcos.swift */; };
+		4445FBAC1DB6136300C36A14 /* FTChatMessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4445FB921DB6136300C36A14 /* FTChatMessageModel.swift */; };
+		4445FBAD1DB6136300C36A14 /* FTChatMessageTableViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4445FB931DB6136300C36A14 /* FTChatMessageTableViewController+DataSource.swift */; };
+		4445FBAE1DB6136300C36A14 /* FTChatMessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4445FB941DB6136300C36A14 /* FTChatMessageTableViewController.swift */; };
+		4445FBAF1DB6136300C36A14 /* FTChatMessageUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4445FB951DB6136300C36A14 /* FTChatMessageUserModel.swift */; };
+		4445FBB11DB61C9300C36A14 /* ChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4445FBB01DB61C9300C36A14 /* ChatTableViewController.swift */; };
 		44704CFD1DB0CC6300C7E7D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44704CFC1DB0CC6300C7E7D8 /* AppDelegate.swift */; };
 		44704CFF1DB0CC6300C7E7D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44704CFE1DB0CC6300C7E7D8 /* ViewController.swift */; };
 		44704D021DB0CC6300C7E7D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44704D001DB0CC6300C7E7D8 /* Main.storyboard */; };
@@ -14,6 +45,19 @@
 		44704D071DB0CC6300C7E7D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44704D051DB0CC6300C7E7D8 /* LaunchScreen.storyboard */; };
 		44704D121DB0CC6300C7E7D8 /* LocationChatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44704D111DB0CC6300C7E7D8 /* LocationChatTests.swift */; };
 		44704D1D1DB0CC6300C7E7D8 /* LocationChatUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44704D1C1DB0CC6300C7E7D8 /* LocationChatUITests.swift */; };
+		44704D421DB0CD3800C7E7D8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44704D3C1DB0CD3800C7E7D8 /* GoogleService-Info.plist */; };
+		44704D4A1DB0D22900C7E7D8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44704D491DB0D22900C7E7D8 /* MapKit.framework */; };
+		44704E1B1DB101C400C7E7D8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44704E1A1DB101C400C7E7D8 /* CoreLocation.framework */; };
+		447B68701DB1DB2D002C7442 /* CustomPinAnnotationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 447B686F1DB1DB2D002C7442 /* CustomPinAnnotationView.xib */; };
+		447B68721DB1DBC2002C7442 /* CustomPinAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447B68711DB1DBC2002C7442 /* CustomPinAnnotationView.swift */; };
+		44801E7C1DB1F95D004A5168 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44801E7B1DB1F95D004A5168 /* SignUpViewController.swift */; };
+		448A83F51DB20D3A001A8F93 /* MeasurementHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448A83F41DB20D3A001A8F93 /* MeasurementHelper.swift */; };
+		448A84051DB25242001A8F93 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448A84041DB25242001A8F93 /* AppState.swift */; };
+		448A84071DB25269001A8F93 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448A84061DB25269001A8F93 /* Constants.swift */; };
+		448A840B1DB258BD001A8F93 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448A840A1DB258BD001A8F93 /* Extensions.swift */; };
+		A56800FF7A6C48DE0505B42A /* Pods_LocationChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 363C22056FFF754EF4BFBEC7 /* Pods_LocationChatTests.framework */; };
+		B8ACE3F670B318C3B39C7022 /* Pods_LocationChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53AC15A2706CFDACABB6BE3C /* Pods_LocationChat.framework */; };
+		C8EBC0BCB2A941C48A43DA69 /* Pods_LocationChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 633462ADD80BE257C1D62F9B /* Pods_LocationChatUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +78,41 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14C932373D60A4EA79635A6E /* Pods-LocationChatUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationChatUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocationChatUITests/Pods-LocationChatUITests.release.xcconfig"; sourceTree = "<group>"; };
+		335B1F46DADC39A80BBB3E51 /* Pods-LocationChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocationChat/Pods-LocationChat.debug.xcconfig"; sourceTree = "<group>"; };
+		363C22056FFF754EF4BFBEC7 /* Pods_LocationChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocationChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		440DE5091DB3EFDD0077F65D /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		440DE50B1DB3FEDF0077F65D /* ChatCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		440DE50C1DB3FEDF0077F65D /* ChatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatCell.xib; sourceTree = "<group>"; };
+		442A8FC61DB71D2500EB16FF /* LocationChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LocationChat.entitlements; sourceTree = "<group>"; };
+		442A8FC91DB7545E00EB16FF /* PreSignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreSignInViewController.swift; sourceTree = "<group>"; };
+		4445FB7A1DB6136300C36A14 /* FTChatMessageBubbleAudioItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTChatMessageBubbleAudioItem.swift; sourceTree = "<group>"; };
+		4445FB7B1DB6136300C36A14 /* FTChatMessageBubbleImageItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTChatMessageBubbleImageItem.swift; sourceTree = "<group>"; };
+		4445FB7C1DB6136300C36A14 /* FTChatMessageBubbleItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTChatMessageBubbleItem.swift; sourceTree = "<group>"; };
+		4445FB7D1DB6136300C36A14 /* FTChatMessageBubbleLocationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTChatMessageBubbleLocationItem.swift; sourceTree = "<group>"; };
+		4445FB7E1DB6136300C36A14 /* FTChatMessageBubbleTextItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTChatMessageBubbleTextItem.swift; sourceTree = "<group>"; };
+		4445FB7F1DB6136300C36A14 /* FTChatMessageBubbleVideoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTChatMessageBubbleVideoItem.swift; sourceTree = "<group>"; };
+		4445FB801DB6136300C36A14 /* FTChatMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTChatMessageCell.swift; sourceTree = "<group>"; };
+		4445FB811DB6136300C36A14 /* FTChatMessageDeliverStatusView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTChatMessageDeliverStatusView.swift; sourceTree = "<group>"; };
+		4445FB821DB6136300C36A14 /* FTChatMessageConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTChatMessageConfiguration.swift; sourceTree = "<group>"; };
+		4445FB831DB6136300C36A14 /* FTChatMessageDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTChatMessageDataSource.swift; sourceTree = "<group>"; };
+		4445FB841DB6136300C36A14 /* FTChatMessageDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTChatMessageDelegate.swift; sourceTree = "<group>"; };
+		4445FB861DB6136300C36A14 /* FTChatMessageHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTChatMessageHeader.swift; sourceTree = "<group>"; };
+		4445FB871DB6136300C36A14 /* FTChatMessageImageSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTChatMessageImageSize.swift; sourceTree = "<group>"; };
+		4445FB891DB6136300C36A14 /* FTChatMessageAccessoryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTChatMessageAccessoryItem.swift; sourceTree = "<group>"; };
+		4445FB8A1DB6136300C36A14 /* FTChatMessageAccessoryItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FTChatMessageAccessoryItem.xib; sourceTree = "<group>"; };
+		4445FB8B1DB6136300C36A14 /* FTChatMessageAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTChatMessageAccessoryView.swift; sourceTree = "<group>"; };
+		4445FB8C1DB6136300C36A14 /* FTChatMessageAccessoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FTChatMessageAccessoryView.xib; sourceTree = "<group>"; };
+		4445FB8D1DB6136300C36A14 /* FTChatMessageInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTChatMessageInputView.swift; sourceTree = "<group>"; };
+		4445FB8E1DB6136300C36A14 /* FTChatMessageInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FTChatMessageInputView.xib; sourceTree = "<group>"; };
+		4445FB8F1DB6136300C36A14 /* FTChatMessageRecorderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTChatMessageRecorderView.swift; sourceTree = "<group>"; };
+		4445FB901DB6136300C36A14 /* FTChatMessageRecorderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FTChatMessageRecorderView.xib; sourceTree = "<group>"; };
+		4445FB911DB6136300C36A14 /* FTChatMessageMarcos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FTChatMessageMarcos.swift; path = ../FTChatMessageMarcos.swift; sourceTree = "<group>"; };
+		4445FB921DB6136300C36A14 /* FTChatMessageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTChatMessageModel.swift; sourceTree = "<group>"; };
+		4445FB931DB6136300C36A14 /* FTChatMessageTableViewController+DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FTChatMessageTableViewController+DataSource.swift"; sourceTree = "<group>"; };
+		4445FB941DB6136300C36A14 /* FTChatMessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTChatMessageTableViewController.swift; sourceTree = "<group>"; };
+		4445FB951DB6136300C36A14 /* FTChatMessageUserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTChatMessageUserModel.swift; sourceTree = "<group>"; };
+		4445FBB01DB61C9300C36A14 /* ChatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewController.swift; sourceTree = "<group>"; };
 		44704CF91DB0CC6300C7E7D8 /* LocationChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44704CFC1DB0CC6300C7E7D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		44704CFE1DB0CC6300C7E7D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +126,23 @@
 		44704D181DB0CC6300C7E7D8 /* LocationChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocationChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44704D1C1DB0CC6300C7E7D8 /* LocationChatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationChatUITests.swift; sourceTree = "<group>"; };
 		44704D1E1DB0CC6300C7E7D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44704D3C1DB0CD3800C7E7D8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		44704D461DB0CD9300C7E7D8 /* LocationChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LocationChat-Bridging-Header.h"; sourceTree = "<group>"; };
+		44704D491DB0D22900C7E7D8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		44704E1A1DB101C400C7E7D8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		447B686F1DB1DB2D002C7442 /* CustomPinAnnotationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomPinAnnotationView.xib; sourceTree = "<group>"; };
+		447B68711DB1DBC2002C7442 /* CustomPinAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPinAnnotationView.swift; sourceTree = "<group>"; };
+		44801E7B1DB1F95D004A5168 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		448A83F41DB20D3A001A8F93 /* MeasurementHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasurementHelper.swift; sourceTree = "<group>"; };
+		448A84041DB25242001A8F93 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		448A84061DB25269001A8F93 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		448A840A1DB258BD001A8F93 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		53AC15A2706CFDACABB6BE3C /* Pods_LocationChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocationChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		633462ADD80BE257C1D62F9B /* Pods_LocationChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LocationChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		71E93B5B1DACEBEBB75BAEDB /* Pods-LocationChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationChatTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocationChatTests/Pods-LocationChatTests.debug.xcconfig"; sourceTree = "<group>"; };
+		87B96EB50D54F5F50598098A /* Pods-LocationChatUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationChatUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LocationChatUITests/Pods-LocationChatUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8FA5054C12DF414FAEE03554 /* Pods-LocationChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocationChat/Pods-LocationChat.release.xcconfig"; sourceTree = "<group>"; };
+		AB9F21B339AAFD3557B34EA4 /* Pods-LocationChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LocationChatTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LocationChatTests/Pods-LocationChatTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +150,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				440DE50A1DB3EFDD0077F65D /* Photos.framework in Frameworks */,
+				44704E1B1DB101C400C7E7D8 /* CoreLocation.framework in Frameworks */,
+				44704D4A1DB0D22900C7E7D8 /* MapKit.framework in Frameworks */,
+				B8ACE3F670B318C3B39C7022 /* Pods_LocationChat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A56800FF7A6C48DE0505B42A /* Pods_LocationChatTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +169,78 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8EBC0BCB2A941C48A43DA69 /* Pods_LocationChatUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4445FB771DB6136300C36A14 /* FTChatMessage */ = {
+			isa = PBXGroup;
+			children = (
+				4445FB781DB6136300C36A14 /* FTChatMessageCell */,
+				4445FB821DB6136300C36A14 /* FTChatMessageConfiguration.swift */,
+				4445FB831DB6136300C36A14 /* FTChatMessageDataSource.swift */,
+				4445FB841DB6136300C36A14 /* FTChatMessageDelegate.swift */,
+				4445FB851DB6136300C36A14 /* FTChatMessageHeader */,
+				4445FB871DB6136300C36A14 /* FTChatMessageImageSize.swift */,
+				4445FB881DB6136300C36A14 /* FTChatMessageInput */,
+				4445FB921DB6136300C36A14 /* FTChatMessageModel.swift */,
+				4445FB931DB6136300C36A14 /* FTChatMessageTableViewController+DataSource.swift */,
+				4445FB941DB6136300C36A14 /* FTChatMessageTableViewController.swift */,
+				4445FB951DB6136300C36A14 /* FTChatMessageUserModel.swift */,
+			);
+			path = FTChatMessage;
+			sourceTree = "<group>";
+		};
+		4445FB781DB6136300C36A14 /* FTChatMessageCell */ = {
+			isa = PBXGroup;
+			children = (
+				4445FB791DB6136300C36A14 /* FTChatMessageBubbleItem */,
+				4445FB801DB6136300C36A14 /* FTChatMessageCell.swift */,
+				4445FB811DB6136300C36A14 /* FTChatMessageDeliverStatusView.swift */,
+			);
+			path = FTChatMessageCell;
+			sourceTree = "<group>";
+		};
+		4445FB791DB6136300C36A14 /* FTChatMessageBubbleItem */ = {
+			isa = PBXGroup;
+			children = (
+				4445FB7A1DB6136300C36A14 /* FTChatMessageBubbleAudioItem.swift */,
+				4445FB7B1DB6136300C36A14 /* FTChatMessageBubbleImageItem.swift */,
+				4445FB7C1DB6136300C36A14 /* FTChatMessageBubbleItem.swift */,
+				4445FB7D1DB6136300C36A14 /* FTChatMessageBubbleLocationItem.swift */,
+				4445FB7E1DB6136300C36A14 /* FTChatMessageBubbleTextItem.swift */,
+				4445FB7F1DB6136300C36A14 /* FTChatMessageBubbleVideoItem.swift */,
+			);
+			path = FTChatMessageBubbleItem;
+			sourceTree = "<group>";
+		};
+		4445FB851DB6136300C36A14 /* FTChatMessageHeader */ = {
+			isa = PBXGroup;
+			children = (
+				4445FB861DB6136300C36A14 /* FTChatMessageHeader.swift */,
+			);
+			path = FTChatMessageHeader;
+			sourceTree = "<group>";
+		};
+		4445FB881DB6136300C36A14 /* FTChatMessageInput */ = {
+			isa = PBXGroup;
+			children = (
+				4445FB911DB6136300C36A14 /* FTChatMessageMarcos.swift */,
+				4445FB891DB6136300C36A14 /* FTChatMessageAccessoryItem.swift */,
+				4445FB8A1DB6136300C36A14 /* FTChatMessageAccessoryItem.xib */,
+				4445FB8B1DB6136300C36A14 /* FTChatMessageAccessoryView.swift */,
+				4445FB8C1DB6136300C36A14 /* FTChatMessageAccessoryView.xib */,
+				4445FB8D1DB6136300C36A14 /* FTChatMessageInputView.swift */,
+				4445FB8E1DB6136300C36A14 /* FTChatMessageInputView.xib */,
+				4445FB8F1DB6136300C36A14 /* FTChatMessageRecorderView.swift */,
+				4445FB901DB6136300C36A14 /* FTChatMessageRecorderView.xib */,
+			);
+			path = FTChatMessageInput;
+			sourceTree = "<group>";
+		};
 		44704CF01DB0CC6300C7E7D8 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +248,8 @@
 				44704D101DB0CC6300C7E7D8 /* LocationChatTests */,
 				44704D1B1DB0CC6300C7E7D8 /* LocationChatUITests */,
 				44704CFA1DB0CC6300C7E7D8 /* Products */,
+				E5098BD7F461B5D1EAD4733D /* Pods */,
+				69CC1BD077026AB8C3DE0CB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +266,21 @@
 		44704CFB1DB0CC6300C7E7D8 /* LocationChat */ = {
 			isa = PBXGroup;
 			children = (
+				442A8FC61DB71D2500EB16FF /* LocationChat.entitlements */,
+				447B686E1DB1DB05002C7442 /* View */,
+				44704D2A1DB0CD3800C7E7D8 /* Resources */,
 				44704CFC1DB0CC6300C7E7D8 /* AppDelegate.swift */,
 				44704CFE1DB0CC6300C7E7D8 /* ViewController.swift */,
+				44801E7B1DB1F95D004A5168 /* SignUpViewController.swift */,
+				442A8FC91DB7545E00EB16FF /* PreSignInViewController.swift */,
+				4445FBB01DB61C9300C36A14 /* ChatTableViewController.swift */,
+				448A84061DB25269001A8F93 /* Constants.swift */,
+				448A840A1DB258BD001A8F93 /* Extensions.swift */,
 				44704D001DB0CC6300C7E7D8 /* Main.storyboard */,
 				44704D031DB0CC6300C7E7D8 /* Assets.xcassets */,
 				44704D051DB0CC6300C7E7D8 /* LaunchScreen.storyboard */,
 				44704D081DB0CC6300C7E7D8 /* Info.plist */,
+				44704D461DB0CD9300C7E7D8 /* LocationChat-Bridging-Header.h */,
 			);
 			path = LocationChat;
 			sourceTree = "<group>";
@@ -125,6 +303,54 @@
 			path = LocationChatUITests;
 			sourceTree = "<group>";
 		};
+		44704D2A1DB0CD3800C7E7D8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4445FB771DB6136300C36A14 /* FTChatMessage */,
+				448A84041DB25242001A8F93 /* AppState.swift */,
+				448A83F41DB20D3A001A8F93 /* MeasurementHelper.swift */,
+				44704D3C1DB0CD3800C7E7D8 /* GoogleService-Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		447B686E1DB1DB05002C7442 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				447B686F1DB1DB2D002C7442 /* CustomPinAnnotationView.xib */,
+				447B68711DB1DBC2002C7442 /* CustomPinAnnotationView.swift */,
+				440DE50B1DB3FEDF0077F65D /* ChatCell.swift */,
+				440DE50C1DB3FEDF0077F65D /* ChatCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		69CC1BD077026AB8C3DE0CB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				440DE5091DB3EFDD0077F65D /* Photos.framework */,
+				44704E1A1DB101C400C7E7D8 /* CoreLocation.framework */,
+				44704D491DB0D22900C7E7D8 /* MapKit.framework */,
+				53AC15A2706CFDACABB6BE3C /* Pods_LocationChat.framework */,
+				363C22056FFF754EF4BFBEC7 /* Pods_LocationChatTests.framework */,
+				633462ADD80BE257C1D62F9B /* Pods_LocationChatUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5098BD7F461B5D1EAD4733D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				335B1F46DADC39A80BBB3E51 /* Pods-LocationChat.debug.xcconfig */,
+				8FA5054C12DF414FAEE03554 /* Pods-LocationChat.release.xcconfig */,
+				71E93B5B1DACEBEBB75BAEDB /* Pods-LocationChatTests.debug.xcconfig */,
+				AB9F21B339AAFD3557B34EA4 /* Pods-LocationChatTests.release.xcconfig */,
+				87B96EB50D54F5F50598098A /* Pods-LocationChatUITests.debug.xcconfig */,
+				14C932373D60A4EA79635A6E /* Pods-LocationChatUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +358,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44704D211DB0CC6300C7E7D8 /* Build configuration list for PBXNativeTarget "LocationChat" */;
 			buildPhases = (
+				4A40F42B7566D34CD89CF0DB /* [CP] Check Pods Manifest.lock */,
 				44704CF51DB0CC6300C7E7D8 /* Sources */,
 				44704CF61DB0CC6300C7E7D8 /* Frameworks */,
 				44704CF71DB0CC6300C7E7D8 /* Resources */,
+				FB4C30DE43D1E6D1AD7624B9 /* [CP] Embed Pods Frameworks */,
+				827341820F5BFC3DC07EF8C7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +378,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44704D241DB0CC6300C7E7D8 /* Build configuration list for PBXNativeTarget "LocationChatTests" */;
 			buildPhases = (
+				31C61698C2C53200754D9918 /* [CP] Check Pods Manifest.lock */,
 				44704D091DB0CC6300C7E7D8 /* Sources */,
 				44704D0A1DB0CC6300C7E7D8 /* Frameworks */,
 				44704D0B1DB0CC6300C7E7D8 /* Resources */,
+				B238499B31872A3B6C885FF9 /* [CP] Embed Pods Frameworks */,
+				1F2E514E02A9E610802E511C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +399,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44704D271DB0CC6300C7E7D8 /* Build configuration list for PBXNativeTarget "LocationChatUITests" */;
 			buildPhases = (
+				0A3E187F920CCE4F9DB066AB /* [CP] Check Pods Manifest.lock */,
 				44704D141DB0CC6300C7E7D8 /* Sources */,
 				44704D151DB0CC6300C7E7D8 /* Frameworks */,
 				44704D161DB0CC6300C7E7D8 /* Resources */,
+				9F130A014BB967B5D1CF5CE3 /* [CP] Embed Pods Frameworks */,
+				56BDB514FDBBBDC07534DBA4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -195,6 +430,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = CD6F43NYAS;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					44704D0C1DB0CC6300C7E7D8 = {
 						CreatedOnToolsVersion = 8.0;
@@ -235,9 +475,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4445FBAA1DB6136300C36A14 /* FTChatMessageRecorderView.xib in Resources */,
+				4445FBA81DB6136300C36A14 /* FTChatMessageInputView.xib in Resources */,
 				44704D071DB0CC6300C7E7D8 /* LaunchScreen.storyboard in Resources */,
+				4445FBA41DB6136300C36A14 /* FTChatMessageAccessoryItem.xib in Resources */,
+				440DE50E1DB3FEDF0077F65D /* ChatCell.xib in Resources */,
+				44704D421DB0CD3800C7E7D8 /* GoogleService-Info.plist in Resources */,
 				44704D041DB0CC6300C7E7D8 /* Assets.xcassets in Resources */,
+				4445FBA61DB6136300C36A14 /* FTChatMessageAccessoryView.xib in Resources */,
 				44704D021DB0CC6300C7E7D8 /* Main.storyboard in Resources */,
+				447B68701DB1DB2D002C7442 /* CustomPinAnnotationView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,13 +504,182 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A3E187F920CCE4F9DB066AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1F2E514E02A9E610802E511C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LocationChatTests/Pods-LocationChatTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31C61698C2C53200754D9918 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4A40F42B7566D34CD89CF0DB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		56BDB514FDBBBDC07534DBA4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LocationChatUITests/Pods-LocationChatUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		827341820F5BFC3DC07EF8C7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LocationChat/Pods-LocationChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F130A014BB967B5D1CF5CE3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LocationChatUITests/Pods-LocationChatUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B238499B31872A3B6C885FF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LocationChatTests/Pods-LocationChatTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB4C30DE43D1E6D1AD7624B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LocationChat/Pods-LocationChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		44704CF51DB0CC6300C7E7D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44801E7C1DB1F95D004A5168 /* SignUpViewController.swift in Sources */,
+				4445FB9E1DB6136300C36A14 /* FTChatMessageConfiguration.swift in Sources */,
+				448A83F51DB20D3A001A8F93 /* MeasurementHelper.swift in Sources */,
+				4445FBAE1DB6136300C36A14 /* FTChatMessageTableViewController.swift in Sources */,
+				447B68721DB1DBC2002C7442 /* CustomPinAnnotationView.swift in Sources */,
+				440DE50D1DB3FEDF0077F65D /* ChatCell.swift in Sources */,
+				4445FBAF1DB6136300C36A14 /* FTChatMessageUserModel.swift in Sources */,
+				4445FBAC1DB6136300C36A14 /* FTChatMessageModel.swift in Sources */,
+				448A840B1DB258BD001A8F93 /* Extensions.swift in Sources */,
+				4445FB9F1DB6136300C36A14 /* FTChatMessageDataSource.swift in Sources */,
+				4445FB9A1DB6136300C36A14 /* FTChatMessageBubbleTextItem.swift in Sources */,
+				4445FB9D1DB6136300C36A14 /* FTChatMessageDeliverStatusView.swift in Sources */,
+				4445FB9B1DB6136300C36A14 /* FTChatMessageBubbleVideoItem.swift in Sources */,
+				4445FBA31DB6136300C36A14 /* FTChatMessageAccessoryItem.swift in Sources */,
+				448A84051DB25242001A8F93 /* AppState.swift in Sources */,
+				4445FB971DB6136300C36A14 /* FTChatMessageBubbleImageItem.swift in Sources */,
+				4445FB991DB6136300C36A14 /* FTChatMessageBubbleLocationItem.swift in Sources */,
+				4445FBB11DB61C9300C36A14 /* ChatTableViewController.swift in Sources */,
+				448A84071DB25269001A8F93 /* Constants.swift in Sources */,
+				4445FBA11DB6136300C36A14 /* FTChatMessageHeader.swift in Sources */,
 				44704CFF1DB0CC6300C7E7D8 /* ViewController.swift in Sources */,
+				4445FB981DB6136300C36A14 /* FTChatMessageBubbleItem.swift in Sources */,
+				4445FBA01DB6136300C36A14 /* FTChatMessageDelegate.swift in Sources */,
+				4445FBAD1DB6136300C36A14 /* FTChatMessageTableViewController+DataSource.swift in Sources */,
+				442A8FCA1DB7545E00EB16FF /* PreSignInViewController.swift in Sources */,
+				4445FBA71DB6136300C36A14 /* FTChatMessageInputView.swift in Sources */,
+				4445FBAB1DB6136300C36A14 /* FTChatMessageMarcos.swift in Sources */,
+				4445FBA21DB6136300C36A14 /* FTChatMessageImageSize.swift in Sources */,
+				4445FBA91DB6136300C36A14 /* FTChatMessageRecorderView.swift in Sources */,
+				4445FB9C1DB6136300C36A14 /* FTChatMessageCell.swift in Sources */,
 				44704CFD1DB0CC6300C7E7D8 /* AppDelegate.swift in Sources */,
+				4445FBA51DB6136300C36A14 /* FTChatMessageAccessoryView.swift in Sources */,
+				4445FB961DB6136300C36A14 /* FTChatMessageBubbleAudioItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +752,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -385,6 +802,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -411,32 +829,41 @@
 		};
 		44704D221DB0CC6300C7E7D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 335B1F46DADC39A80BBB3E51 /* Pods-LocationChat.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LocationChat/LocationChat.entitlements;
 				DEVELOPMENT_TEAM = CD6F43NYAS;
 				INFOPLIST_FILE = LocationChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.soham.LocationChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/sohambhattacharjee/Documents/Work/Personal Stuffs/LocationChat/LocationChat/LocationChat-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		44704D231DB0CC6300C7E7D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FA5054C12DF414FAEE03554 /* Pods-LocationChat.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LocationChat/LocationChat.entitlements;
 				DEVELOPMENT_TEAM = CD6F43NYAS;
 				INFOPLIST_FILE = LocationChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.soham.LocationChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/sohambhattacharjee/Documents/Work/Personal Stuffs/LocationChat/LocationChat/LocationChat-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		44704D251DB0CC6300C7E7D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 71E93B5B1DACEBEBB75BAEDB /* Pods-LocationChatTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -452,6 +879,7 @@
 		};
 		44704D261DB0CC6300C7E7D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB9F21B339AAFD3557B34EA4 /* Pods-LocationChatTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -467,6 +895,7 @@
 		};
 		44704D281DB0CC6300C7E7D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87B96EB50D54F5F50598098A /* Pods-LocationChatUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = CD6F43NYAS;
@@ -481,6 +910,7 @@
 		};
 		44704D291DB0CC6300C7E7D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14C932373D60A4EA79635A6E /* Pods-LocationChatUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = CD6F43NYAS;
@@ -512,6 +942,7 @@
 				44704D231DB0CC6300C7E7D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		44704D241DB0CC6300C7E7D8 /* Build configuration list for PBXNativeTarget "LocationChatTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +951,7 @@
 				44704D261DB0CC6300C7E7D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		44704D271DB0CC6300C7E7D8 /* Build configuration list for PBXNativeTarget "LocationChatUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +960,7 @@
 				44704D291DB0CC6300C7E7D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

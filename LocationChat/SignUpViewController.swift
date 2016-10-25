@@ -1,5 +1,5 @@
 //
-//  SignInViewController.swift
+//  SignUpViewController.swift
 //  LocationChat
 //
 //  Created by Soham Bhattacharjee on 15/10/16.
@@ -13,7 +13,7 @@ import FirebaseStorage
 import QuartzCore
 import MobileCoreServices
 
-class SignInViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class SignUpViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     // MARK: IBOutlets
     @IBOutlet weak var emailField: UITextField!
@@ -29,7 +29,7 @@ class SignInViewController: UIViewController, UIImagePickerControllerDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        navigationItem.hidesBackButton = true
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -66,7 +66,7 @@ class SignInViewController: UIViewController, UIImagePickerControllerDelegate, U
         btnUserProfile.layer.borderWidth = 2.0
         btnUserProfile.layer.masksToBounds = true
         btnUserProfile.clipsToBounds = true
-        
+
         print("Screen height: \(UIScreen.main.bounds.height)")
         if UIScreen.main.bounds.height <= 568.0 {
             NotificationCenter.default.addObserver(forName: NSNotification.Name.UIKeyboardDidShow, object: nil, queue: OperationQueue.main) { (notification) in
@@ -98,7 +98,7 @@ class SignInViewController: UIViewController, UIImagePickerControllerDelegate, U
     // MARK: Actions
     @IBAction func didTapSignIn(_ sender: AnyObject) {
         // Sign In with credentials.
-        UIApplication.shared.startNetworkActivity()
+        UIApplication.shared.startNetworkActivity(info: nil)
         
         if !self.checkMandatoryFields(isForSignUp: false) {
             UIApplication.shared.stopNetworkActivity()
@@ -124,12 +124,12 @@ class SignInViewController: UIViewController, UIImagePickerControllerDelegate, U
                         }
                     })
                 }
-                SignInViewController.signedIn(user!, self, Constants.Segues.signInToMap)
+                SignUpViewController.signedIn(user!, self, Constants.Segues.signInToMap)
             }
         }
     }
     @IBAction func didTapSignUp(_ sender: AnyObject) {
-        UIApplication.shared.startNetworkActivity()
+        UIApplication.shared.startNetworkActivity(info: nil)
         
         if !self.checkMandatoryFields(isForSignUp: true) {
             UIApplication.shared.stopNetworkActivity()
@@ -199,7 +199,7 @@ class SignInViewController: UIViewController, UIImagePickerControllerDelegate, U
             if self.didImageChange {
                 self.didImageChange = false
             }
-            SignInViewController.signedIn(FIRAuth.auth()?.currentUser, self, Constants.Segues.signInToMap)
+            SignUpViewController.signedIn(FIRAuth.auth()?.currentUser, self, Constants.Segues.signInToMap)
         }
     }
     func changeProfilePicture(user: FIRUser, completion: @escaping (_ success: Bool, _ errorDesc: String?, _ _downloadURL: URL?) -> Void) {
@@ -258,7 +258,7 @@ class SignInViewController: UIViewController, UIImagePickerControllerDelegate, U
     // MARK: - Navigation
     @IBAction func unwindToMenu(segue: UIStoryboardSegue) {}
 }
-extension SignInViewController {
+extension SignUpViewController {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             btnUserProfile.contentMode = .scaleAspectFill
